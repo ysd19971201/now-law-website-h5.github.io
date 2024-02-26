@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float demo</title>
+</head>
+<body>
+  <div class="box">
+    <div class="float-point point1">1g</div>
+  </div>
+</body>
+<style>
+  .box {
+    width: 500px;
+    height: 500px;
+    background: url('./bg-tree.jpg') center bottom no-repeat;
+    background-size: contain;
+    position: relative;
+    border:1px solid;
+  }
+ 
+  .float-point {
+    position: absolute;
+    background: radial-gradient(circle at center, #E6F4CE, #93C263);
+    box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.7) inset,
+      0px 0px 5px 0px rgba(184, 251, 255, 0.29),
+      0px 0px 3px 0px rgba(255, 255, 255, 0.63) inset;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    color: #8BAE68;
+    font-size: 14px;
+    line-height: 35px;
+    text-align: center;
+  }
+ 
+  .point1 {
+    left: 200px;
+    top: 200px;
+    animation: float 3s ease-in-out infinite;
+  }
+ 
+  .point2 {
+    left: 100px;
+    top: 130px;
+    animation: float 3s ease-in-out -0.5s infinite;
+  }
+ 
+  .point3 {
+    left: 180px;
+    top: 100px;
+    animation: float 3s ease-in-out -1s infinite;
+  }
+ 
+  .point4 {
+    left: 300px;
+    top: 80px;
+    animation: float 3s ease-in-out -1.5s infinite;
+  }
+ 
+  .point5 {
+    left: 380px;
+    top: 130px;
+    animation: float 3s ease-in-out -2s infinite;
+  }
+ 
+  .point6 {
+    left: 420px;
+    top: 190px;
+    animation: float 3s ease-in-out -2.5s infinite;
+  }
+ 
+  /* 定义飘动动画的 keyframes */
+  @keyframes float {
+    from {
+      transform: translatey(0px) scale(1);
+    }
+    50% {
+      transform: translatey(-7px) scale(1.03);
+    }
+    to {
+      transform: translatey(0px) scale(1);
+    }
+  }
+</style>
+</html>
